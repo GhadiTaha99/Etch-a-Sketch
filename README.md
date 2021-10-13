@@ -1,1 +1,1 @@
-Etch-A-Sketch built using HTML, CSS and vanilla Javascript.
+Etch-A-Sketch built using HTML, CSS and vanilla Javascript. For a live preview [click here!](https://ghaditaha99.github.io/Etch-a-Sketch/)
