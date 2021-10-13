@@ -11,7 +11,7 @@
 
 body{
     font-size: 12px;
-    background-color: #f39ddd;
+    background-color: #ff15c4;
     font-family: "Roboto";
 }
 
@@ -30,31 +30,107 @@ body{
     align-items: center;
 }
 
-.info h1{
-    margin: 20px;
-    font-weight: bold;
-    font-size: 80px;
-}
-
-.info h3{
+#title{
     margin: 10px;
     font-weight: bold;
+    font-size: 80px;
+    text-shadow: 5px 5px #ffffff;
+}
+
+#description{
+    margin-bottom: 20px;
+    font-weight: bold;
     font-size: 30px;
+    text-shadow: 3px 3px #ffffff;
 }
 
 #game {
     display: flex;
     flex-direction: row;
+    background-color: #f8b4e7;
+    border: 5px solid black;
+    box-shadow: 10px 10px white;
+    padding: 20px;
+    border-radius: 20px;
 }
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 6px;
+}
+
+.options_btn{
+    height: 60px;
+    width: 120px;
+    border-radius: 12px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+    background-color: #ff15c4;
+}
+.options_btn:hover{
+    background-color: #f760d1;
+}
+#rainbow-btn:hover{
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    animation:slidebg 5s linear infinite;
+}
+.active {
+    background-color: white;
+    border: 4px solid #ff15c4;
+    color: #ff15c4;
+    cursor: default;
+}
+.active:hover {
+    background-color: white;
+    background-image: none !important;
+}
+
+@keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
+  }
 
 #grid-container {
     display: grid;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    height: 700px;
+    width: 700px;
+    max-height: 700px;
+    max-width: 700px;
+    border: 1px solid black;
 }
-
-.grid-item {
-    padding: 1em;
+#sizeOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff15c4;
+    text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -1px 1px 0 #FFF, 2px 2px 0 #FFF;
+}
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #ffffff; 
+    outline: none; 
+    opacity: 0.7;
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 5px;
+}
+.cell {
+    padding: 1px;
     border: 1px solid #ddd;
     text-align: center;
     background-color: white;
