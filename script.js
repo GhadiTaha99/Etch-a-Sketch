@@ -38,6 +38,7 @@ const gridClear = () => {
   };
 
 const resetGrid = () => {
+  gridGray();
   deleteGrid();
   createGrid(rowsValue);
 }
